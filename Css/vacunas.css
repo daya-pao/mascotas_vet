@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-image: url("../img/veterinario.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+}
+
+.btn_atras{
+    background-color: #333;
+    color: #fff;
+    width: 7vw;
+    height: 3vw;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+h2 {
+    margin-top: 20px;
+}
+
+.form_vacunas {
+    background-color:transparent;
+    padding: 28px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(252, 86, 86, 0.2);
+    width: 350px;
+    margin: 3vw auto;
+}
+a{
+    color: #fff;
+}
+.form_label {
+    display: block;
+    margin-top: 10px;
+
+}
+
+.form_input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+input[type="submit"] {
+    background-color: #555;
+    color: #fff;
+    width: 11vw;
+    height: 3vw;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+}
+.error{
+    text-align: center;
+    color: red;
+}
+.error_correcto{
+    text-align: center;
+    color: green;
+}

@@ -1,0 +1,13 @@
+<?php
+
+class mascota{
+
+    public  int  $id;
+    public  string $nombre;
+    public  string $fechaNacimiento;
+    public   $foto;
+    public  int $userId;
+    public  int $tipoMascotaId;
+    public  int $razaId;
+}
+?>

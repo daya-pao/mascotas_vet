@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner{
+    background-image:url("../img/bannerB.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 97vh;
+}
+.logotipo{
+    width: 29vw;
+}
+.contenido {
+    width: 40vw;
+    height: 30vh;
+    font-size: 3vw;
+}
+.contenido p{
+    font-size: 2vw;
+}
+#animacion_titulo{
+    color: #d89b9b;
+    animation: animacionTitulo 5s linear infinite;
+}
+@keyframes animacionTitulo {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+#animacio_texto{
+    color: #e96d6d;
+    animation: animacionTexto 5s linear infinite;
+}
+@keyframes animacionTexto {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}

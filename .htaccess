@@ -1,0 +1,4 @@
+
+ErrorDocument 404 /pcomposer/404.php
+ErrorDocument 403 /pcomposer/403.php
+

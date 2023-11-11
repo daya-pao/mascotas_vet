@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: clamp(1.1vw,15rem,1vw);
+}
+.banner_mascota {
+    background-image:url("../img/banner.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 7vw 12vw;
+}
+.form__logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logotipo{
+    width: 12vw;
+
+}
+.form__login {
+    width:30vw;
+    height: 34vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 2vw;
+    margin-top: -1vw;
+    border-radius: 2vw;
+}
+.titulo{
+    text-align: center;
+    font-size: 2vw;
+}
+.form__input {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.form__label{
+    display: flex;
+    align-items: center;
+    font-size: 1.7vw;
+    gap: 1vw;
+}
+icon-icon{
+    font-size: 1vw;
+}
+input{
+    height:3vw;
+    border: 0;
+    border-radius: 2vw;
+    font-size: 1vw;
+    padding: 1vw;
+}
+.form__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form__btn a{
+    font-size: 1.5vw;
+}
+.btn_iniciar{
+    height: 3vw;
+    width: 10vw;
+    border-radius: 2vw;
+    border: 0;
+    font-size: 1vw;
+    background: rgb(243, 135, 135);
+    transition: 0.5 ease;
+}
+.btn_iniciar:hover{
+    background: rgb(233, 161, 161);
+    color: black;
+}
+
+.error{
+    text-align: center;
+    color: red;
+}
+.color{
+    color: rgb(189, 112, 118)
+}
+

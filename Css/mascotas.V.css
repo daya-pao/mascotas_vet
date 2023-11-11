@@ -1,0 +1,78 @@
+body{
+    background-image: url("../img/fondomascotas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.form_mascotas {
+    max-width: 400px;
+    margin: 0px auto;
+    padding: 24px 24px 24px 65px;
+    background-color: #bdb9b9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form_label {
+    display: block;
+    margin-top: -18px
+}
+.form_input {
+    width: 83%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #555;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.form_mascotas button:hover {
+    background-color: #555;
+}
+
+.form_mascotas h2 {
+    text-align: center;
+}
+.form_mascotas select {
+    width: 88%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.error_message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.form_mascotas input[type="date"] {
+    width: 83%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
