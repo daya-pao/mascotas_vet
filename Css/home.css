@@ -146,9 +146,11 @@ img {
     transition: 0.5s;
     background: rgba(250,212,165,255);
 }
-/* .navegacion.active */
+.navegacion.active{
    /*  width: 14vw; */
-.menu_toggle{
+}
+
+/* .menu_toggle{
     position: absolute;
     top:0;
     left: 0;
@@ -183,7 +185,7 @@ img {
 .navegacion.active .menu_toggle::after{
     transform: translateY(0) rotate(-45deg);
     box-shadow: 0 0 0 #333;  
-}
+} */
 .navegacion .ul{
     display: flex;
     flex-direction: column;

@@ -81,7 +81,6 @@ h1 {
     margin-left: 8vw;
 }
 .table{
-  border:1px solid red;
   width: 56vw;
   margin: 1vw auto;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -96,9 +95,6 @@ h1 {
 }
 .table_th{
   background: #aedcec ;
-}
-td{
-    border: 1px solid red;
 }
 .btn_crear{
     background-color: #333;
@@ -130,7 +126,7 @@ td{
 .navegacion.active{
    /*  width: 14vw; */
 }
-.menu_toggle{
+/* .menu_toggle{
     position: absolute;
     top:0;
     left: 0;
@@ -149,8 +145,8 @@ td{
     height: 1vh;
     background: rgb(2, 2, 2);
     transform: translateY(-1vw);
-}
-.navegacion.active .menu_toggle::before{
+} */
+/* .navegacion.active .menu_toggle::before{
     transform: translateY(0) rotate(45deg);  
 }
 .menu_toggle::after{
@@ -161,7 +157,7 @@ td{
     background:rgb(5, 5, 5);;
     box-shadow: 0 -14px 0 rgb(20, 19, 19);;
     transform: translateY(1vw);
-}
+} */
 .navegacion.active .menu_toggle::after{
     transform: translateY(0) rotate(-45deg);
     box-shadow: 0 0 0 #333;  
@@ -211,8 +207,7 @@ ion-icon:hover{
 .btn {
     width: 5vw;
     padding: 6px 7px;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #65bb59;
     text-decoration: none;
     border-radius: 3px;
     border: 0;
@@ -230,5 +225,5 @@ td.td_btn {
     justify-content: center;
 }
 .btn_blue:hover ,.submit:hover {
-    background-color: #0056b3;
+    background-color: #2ed460;
 }

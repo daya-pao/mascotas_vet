@@ -4,10 +4,11 @@ class mascota{
 
     public  int  $id;
     public  string $nombre;
-    public  string $fechaNacimiento;
-    public   $foto;
+    public  string $FechaNacimiento;
+   /*  public   $foto; */
     public  int $userId;
     public  int $tipoMascotaId;
-    public  int $razaId;
+    
+   /* public  int $razaId;  */
 }
 ?>

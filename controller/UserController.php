@@ -38,10 +38,12 @@ class UserControl extends dataconexion{
         echo '<td>' . $email . '</td>';
        /*  echo '<td>' . $contraseña . '</td>'; */
         echo '<td class="td_btn">
-        <button class= "btn btn_blue" ><a href="../view/actualizar.View.php?updateid='.$id.'">update</a></button>
+        <button class= "btn btn_blue" ><a href="../view/actualizar.View.php?updateid='.$id.'">editar</a>
+        <div></div>
+        </button>
           <form method="post" action="../procesos/eliminaruser.php">
             <input type="hidden" name="userid" value="' . $id . '">
-            <button class="btn btn_red" type="submit" name="userdelete">Delete</button>
+            <button class="btn btn_red" type="submit" name="userdelete">eliminar</button>
           </form>
         </td>';
         echo '</tr>';

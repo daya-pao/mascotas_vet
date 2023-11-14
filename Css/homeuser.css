@@ -41,14 +41,14 @@
     font-size: 2vw;
 }
 .contenido{
-    width: 92vw;
+    width: 48vw;
     margin: 3vw auto;
-    height: 46vh;
+    height: 49vh;
+    font-size: 1.8vw;
     text-align: center;
     border-radius: 2vw;
     display: flex;
     flex-direction: column;
-    gap: 1vw;
 
 }
 .nav_contenido{
@@ -70,7 +70,7 @@
 }
 .border_caja{
     border-radius: 5vw;
-    border: 0.3vw solid  #aedcec;;
+    border: 0.3vw solid  #aedcec;
     width: 11vw;
     height: 24vh;
     display: flex;
@@ -86,10 +86,26 @@
     color: black;
 }
 .informacion{
-    width: 19vw;
+    width: 100vw;
     padding: 6vw;
     display: flex;
-    flex-direction: column;
     gap: 2vw;
-
+    background-image: url("../img/bannerB.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+.informacion_mascota{
+    display: flex;
+    flex-direction: column;
+    gap: 6vw;
+}
+@keyframes multiColor {
+    0% { color: rgba(250,212,165,255);; }
+    50% { color:  #aedcec;}
+    100% { color:rgb(223, 148, 148); }
+}
+
+.contenido_bienvenida {
+    animation: multiColor 5s infinite;
+}
+

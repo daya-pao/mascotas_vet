@@ -1,12 +1,9 @@
 <?php
 
-class tipomascota{
+class TipoMascota{
 
     public int $id;
     public string $nombre;
-    public int $EdadEquivalenteJoven;
-    public int $EdadEquivalenteAbulto;
-    public int $EdadAbulto;
+    
 }
-
 ?>

@@ -1,0 +1,10 @@
+<?php 
+session_start();
+if (isset($_SESSION['nombreUsuario']) && isset($_SESSION['rolUsuario'])) {
+    $nombreUsuario = $_SESSION['nombreUsuario'];
+    $rolUsuario = $_SESSION['rolUsuario']; 
+    $rolnombre = ($rolUsuario == 1) ? 'User' : 'Admin';
+} else {
+    echo "error";
+}
+?>

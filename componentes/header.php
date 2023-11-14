@@ -1,22 +1,10 @@
-<?php
-
-session_start();
-if (isset($_SESSION['nombreUsuario']) && isset($_SESSION['rolUsuario'])) {
-    $nombreUsuario = $_SESSION['nombreUsuario'];
-    $rolUsuario = $_SESSION['rolUsuario']; 
-    $rolnombre = ($rolUsuario == 1) ? 'User' : 'Admin';
-} else {
-    echo "error";
-}
-
-?>
 
 <header class="encabezado">
     <div class="perfil">
         <div class="border"><img src="../img/user_vector.png" class="user_ejemplo"></div>
         <div>
-          <p >nombre:<?/*   echo $nombreUsuario; */ ?></p>
-          <p>Rol: <?/*   echo $rolnombre; */  ?></p>
+          <p >nombre:<?php /* echo $nombreUsuario; */?></p>
+          <p>Rol: <?php  /* echo $rolnombre; */?></p>
         </div>
     </div>
     <div class="nav_contenido">

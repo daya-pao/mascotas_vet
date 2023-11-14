@@ -81,7 +81,6 @@ h1 {
     margin-left: 8vw;
 }
 .table{
-  border:1px solid red;
   width: 80vw;
   margin: 1vw auto;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -96,9 +95,6 @@ h1 {
 }
 .table_th{
     background: #aedcec;
-}
-td{
-    border: 1px solid red;
 }
 .btn_crear{
     background-color: #333;
@@ -129,7 +125,7 @@ td{
 .navegacion.active{
    /*  width: 14vw; */
 }
-.menu_toggle{
+/* .menu_toggle{
     position: absolute;
     top:0;
     left: 0;
@@ -160,7 +156,7 @@ td{
     background:rgb(5, 5, 5);;
     box-shadow: 0 -14px 0 rgb(20, 19, 19);;
     transform: translateY(1vw);
-}
+} */
 .navegacion.active .menu_toggle::after{
     transform: translateY(0) rotate(-45deg);
     box-shadow: 0 0 0 #333;  

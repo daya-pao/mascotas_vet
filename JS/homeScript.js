@@ -1,5 +1,5 @@
 /* cadigo para desplegar el menu */
-let menutoggle = document.querySelector('.menu_toggle');
+/* let menutoggle = document.querySelector('.menu_toggle');
 let navegacion = document.querySelector('.navegacion');
 
 let lista = document.querySelectorAll('.li');
@@ -13,4 +13,4 @@ function activelista() {
     this.classList.add('active');
 }
 lista.forEach((item)=>
-item.addEventListener('click',activelista));
+item.addEventListener('click',activelista)); */
