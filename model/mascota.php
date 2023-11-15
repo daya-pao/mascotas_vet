@@ -7,7 +7,7 @@ class mascota{
     public  string $FechaNacimiento;
    /*  public   $foto; */
     public  int $userId;
-/*     public  int $tipoMascotaId; */
+    public  int $tipoMascotaId;
     
    /* public  int $razaId;  */
 }

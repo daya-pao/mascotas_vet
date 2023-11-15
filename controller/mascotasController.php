@@ -1,10 +1,11 @@
 <?php
 require_once(__DIR__ ."/../conexion.php");
 require_once(__DIR__ ."/../model/mascota.php");
+require_once(__DIR__ ."/../model/TipoMascota.php");
 
 class MascotasController extends dataconexion{
     
-    public function CreateMascota(){
+    public function CreateMascota($nombre, $fechaNacimiento, $nombreDueño, $tipoMascotaId){
         $conn = $this ->conexion();
         $mascota = new mascota();
         $mascota->nombre = $_POST['nombre'];
@@ -23,10 +24,6 @@ class MascotasController extends dataconexion{
 
         }
     }
-
-
-
-
     public function obtenerUserId($nombreDueño) {
         $conn = $this->conexion();
         $nombreDueño = $conn->real_escape_string($nombreDueño);
@@ -39,4 +36,16 @@ class MascotasController extends dataconexion{
             return null;
         }
     }
-}
+   /*  public function obtenerTipoMascotaId( $tipoMascotaNombre){
+        $conn = $this->conexion();
+        $tipoMascotaNombre = $conn->real_escape_string( $tipoMascotaNombre );
+        $consulta = "SELECT id FROM TipoMascota WHERE nombre= ' $tipoMascotaNombre'";
+        $resultado = $conn->query($consulta);
+        if ($resultado && $resultado->num_rows > 0) {
+            $fila = $resultado->fetch_assoc();
+            return $fila['id'];
+        }else{
+            return null;
+        }
+    }  */ 
+} 

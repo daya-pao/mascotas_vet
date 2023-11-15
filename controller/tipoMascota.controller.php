@@ -1,10 +1,8 @@
 <?php
-
 require_once(__DIR__ . "/../conexion.php");
 require_once(__DIR__ . "/../model/TipoMascota.php");
 
 class TipoMascotaController extends dataconexion {
-    
     public function CreateTipoMascota($nombre) {
         $conn = $this->conexion();
 
@@ -13,8 +11,7 @@ class TipoMascotaController extends dataconexion {
         $consulta = "INSERT INTO TipoMascota ( nombre) VALUES ('$nombre')";
         $conn->query($consulta);
 
-        // Devolver el ID del nuevo tipo de mascota
-        return $conn->insert_id;
+        return $consulta;
     }
 }
 ?>
