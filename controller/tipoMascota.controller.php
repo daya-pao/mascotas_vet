@@ -10,7 +10,7 @@ class TipoMascotaController extends dataconexion {
 
         $nombre = $conn->real_escape_string($nombre);
 
-        $consulta = "INSERT INTO TipoMascota (nombre) VALUES ('$nombre')";
+        $consulta = "INSERT INTO TipoMascota ( nombre) VALUES ('$nombre')";
         $conn->query($consulta);
 
         // Devolver el ID del nuevo tipo de mascota

@@ -22,10 +22,10 @@
 
        <label class="form_label">Tipo de Mascota:</label>
         <select name="tipo_mascota" required>
-            <option value="1">Perro</option>
-            <option value="2">Gato</option>
-            <option value="3">Ave</option>
-            <option value="4">Otro</option>
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+            <option value="ave">Ave</option>
+            <option value="otro">Otro</option>
         </select><br><br>
        <!--   <label class="form_label">Raza</label>
         <input type="number" name="raza_id"  class="form_input"><br><br>  -->
