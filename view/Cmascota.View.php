@@ -10,8 +10,8 @@
 <body>
     
     <form action="" method="POST" class="form_mascotas">
+     <?php   include(__DIR__ ."/../procesos/Cmascotas.php") ?>
        <h2>Registro de Mascota</h2>
-       <?php   include(__DIR__ ."/../procesos/Cmascotas.php") ?>
         <label class="form_label">Nombre de la Mascota:</label>
         <input type="text" name="nombre"  class="form_input"><br><br>
 
@@ -27,8 +27,8 @@
             <option value="ave">Ave</option>
             <option value="otro">Otro</option>
         </select><br><br>
-       <!--   <label class="form_label">Raza</label>
-        <input type="number" name="raza_id"  class="form_input"><br><br>  -->
+        <label class="form_label">Raza</label>
+        <input type="text" name="raza" class="form_input"><br><br>
 
         <input type="submit" value="Registrar Mascota">
         <button class="btn_atras"><a href="../view/HomeUser.php">ATRAS</a></button>

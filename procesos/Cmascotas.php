@@ -1,26 +1,31 @@
 <?php
 require_once(__DIR__ . "/../controller/mascotasController.php");
 require_once(__DIR__ . "/../controller/tipoMascota.controller.php");
-
+require_once(__DIR__ . "/../controller/RazaController.php");
 require_once(__DIR__ . "/../conexion.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    $mascotacController = new MascotasController();
    $tipomascotaController = new TipoMascotaController();
+   $razaController = new RazaController();
 
    $mascota = new mascota();
 
-   if (empty($_POST['nombre']) || empty($_POST['fecha_nacimiento']) || empty($_POST['dueño']) || empty($_POST['tipo_mascota'])){
+   if (empty($_POST['nombre']) || empty($_POST['fecha_nacimiento']) || empty($_POST['dueño']) || empty($_POST['tipo_mascota'])|| empty($_POST['raza'])){
       echo '<div class="error">Todos los campos son obligatorios</div>';
    } else {
       $nombre = $_POST['nombre'];
       $fechaNacimiento = $_POST['fecha_nacimiento'];
       $nombreDueño = $_POST['dueño'];
       $tipoMascotaNombre = $_POST['tipo_mascota'];
+      $razanombre=$_POST['raza'];
       $user_id = $mascotacController->obtenerUserId($nombreDueño);
+      $tipo_mascota_id = $mascotacController->obtenerTipoMascotaId($tipoMascotaNombre);
 
-      $tipoMascotaId =  $tipomascotaController->CreateTipoMascota($tipoMascotaNombre);
-      $result = $mascotacController->CreateMascota($nombre, $fechaNacimiento, $nombreDueño, $tipoMascotaId);
+
+      $tipoMascotatipos =  $tipomascotaController->CreateTipoMascota($tipoMascotaNombre);
+      $razamascota = $razaController->CreateRaza($razanombre);
+      $result = $mascotacController->CreateMascota($nombre, $fechaNacimiento, $nombreDueño,$user_id,$tipo_mascota_id);
 
       if ($result) {
          echo '<div class="error_correcto">Mascota registrada exitosamente</div>';
