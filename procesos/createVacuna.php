@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($result) {
             echo '<div class="error_correcto">Vacuna registrada exitosamente</div>';
+            header('Location: ../view/vacunas.view.php');
         } else {
             echo '<div class="error">Error al registrar la vacuna</div>';
         }

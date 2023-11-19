@@ -8,7 +8,6 @@
     <title>Registro de Mascotas</title>
 </head>
 <body>
-    
     <form action="" method="POST" class="form_mascotas">
      <?php   include(__DIR__ ."/../procesos/Cmascotas.php") ?>
        <h2>Registro de Mascota</h2>
@@ -16,19 +15,20 @@
         <input type="text" name="nombre"  class="form_input"><br><br>
 
         <label class="form_label">Fecha de Nacimiento:</label>
-        <input type="date" name="fecha_nacimiento"  class="form_input"><br><br>
+        <input type="date" name="FechaNacimiento"  class="form_input"><br><br>
         <label class="form_label">Dueño</label>
-        <input type="text" name="dueño"  class="form_input"><br><br>
+        <input type="text" name="User_id"  class="form_input"><br><br>
 
        <label class="form_label">Tipo de Mascota:</label>
-        <select name="tipo_mascota" required>
+        <select name="TipoMascota_id" required>
             <option value="perro">Perro</option>
             <option value="gato">Gato</option>
             <option value="ave">Ave</option>
-            <option value="otro">Otro</option>
+            <option value="conejo">conejo</option>
+            <option value="">Otro</option>
         </select><br><br>
         <label class="form_label">Raza</label>
-        <input type="text" name="raza" class="form_input"><br><br>
+        <input type="text" name="Raza_id" class="form_input"><br><br>
 
         <input type="submit" value="Registrar Mascota">
         <button class="btn_atras"><a href="../view/HomeUser.php">ATRAS</a></button>

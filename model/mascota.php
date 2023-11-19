@@ -8,6 +8,6 @@ class mascota{
    /*  public   $foto; */
     public  int $userId;
     public  int $tipoMascotaId;
-   /*  public  int $razaId; */
+   public  int $razaId;
 }
 ?>

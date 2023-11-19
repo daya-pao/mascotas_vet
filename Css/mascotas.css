@@ -109,6 +109,37 @@ h1 {
     background-color:#a8d8ef;
     transition: 3s ease;
 }
+.btn {
+    width: 5vw;
+    padding: 6px 7px;
+    background-color: #65bb59;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 0;
+}
+.btn_red{
+    background-color: red;
+}
+.btn_red:hover{
+    background-color: rgb(145, 44, 44);
+
+}
+td.td_btn {
+    display: flex;
+    gap: 3vw;
+    justify-content: center;
+}
+.btn_blue:hover ,.submit:hover {
+    background-color: #2ed460;
+}
+a{
+    color: white;
+}
+td.td_btn {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
 /* navegacion */
 
 .navegacion{

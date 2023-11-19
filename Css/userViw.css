@@ -74,11 +74,10 @@ h1 {
 .btn {
     width: 5vw;
     padding: 6px 7px;
-    background-color: #00ff00;
+    background-color: #65bb59;
     text-decoration: none;
     border-radius: 3px;
     border: 0;
-    color: black;
 }
 .btn_red{
     background-color: red;
@@ -87,10 +86,13 @@ h1 {
     background-color: rgb(145, 44, 44);
 
 }
+td.td_btn {
+    display: flex;
+    gap: 3vw;
+    justify-content: center;
+}
 .btn_blue:hover ,.submit:hover {
-    background-color: #00b345;
-    
-    
+    background-color: #2ed460;
 }
 a{
     color: white;

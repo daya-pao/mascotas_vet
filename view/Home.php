@@ -48,7 +48,7 @@
                     <hr class="line">
                     <div>
                         <img src="../img/vacuna.png" class="img">
-                        <h2>vacunas</h2>
+                        <h2>ControlV</h2>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@ class raza{
 
     public int $id;
     public string $nombre;
-    /* public int $tipoMascotaId; */
+    public int $tipoMascotaId;
 
     
 }

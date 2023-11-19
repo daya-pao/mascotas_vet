@@ -16,18 +16,22 @@
     ?>
     <div class="table_contenido">
      <h2>Gestion de Mascotas</h2>
-     <button class="btn_crear"><a href="../view/Cmascota.View.php">CREAR</a></button>
         <table class="table">
             <tr class="table__tr">
                 <!-- <th class="table_th">Id</th> -->
                 <th class="table_th">Nombre mascota</th>
                 <th class="table_th">Fecha Nacimiento</th>
-                <th class="table_th">Tipo Mascota</th>
                 <th class="table_th">Dueño</th>
+                <th class="table_th">Tipo Mascota</th>
                 <th class="table_th">Raza</th>
-                <th class="table_th">Foto</th>
+                <!-- <th class="table_th">Foto</th> -->
                 <th class="table_th">Procesos</th>
             </tr>
+            <?php require_once(__DIR__ ."/../conexion.php");
+             require_once(__DIR__ ."/../controller/mascotasController.php");
+             $mascotacController = new MascotasController();
+             $mascotacController->ReadMascota();
+        ?>
         </table>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
