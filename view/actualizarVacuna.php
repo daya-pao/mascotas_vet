@@ -39,7 +39,7 @@ if (isset($_GET['updateid'])) {
         margin-top: 10px;
     }
     input[type="text"],
-    input[type="date"],{
+    input[type="date"]{
         width: 100%;
         padding: 10px;
         margin: 5px 0;

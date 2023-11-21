@@ -16,7 +16,7 @@ body {
     background-color: #333;
     color: #fff;
     width: 7vw;
-    height: 3vw;
+    height: 2vw;
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -31,7 +31,7 @@ h2 {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(252, 86, 86, 0.2);
     width: 350px;
-    margin: 3vw auto;
+    margin: 16vw auto;
 }
 a{
     color: #fff;
@@ -52,14 +52,17 @@ a{
 input[type="submit"] {
     background-color: #555;
     color: #fff;
-    width: 11vw;
-    height: 3vw;
+    width: 10vw;
+    height: 2vw;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    margin-top: 10px;
 }
-
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
 input[type="submit"]:hover {
     background-color: #333;
 }

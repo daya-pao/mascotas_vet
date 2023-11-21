@@ -12,8 +12,10 @@
 <body>
     <?php 
     require_once(__DIR__ ."/../componentes/header.php");
-    require_once(__DIR__ ."/../componentes/navegacion.php")
+    require_once(__DIR__ ."/../componentes/navegacion.php");
+
     ?>
+
    
     <div class="contenido">
         <div class="contenido_bienvenida  animate_bienvenida">

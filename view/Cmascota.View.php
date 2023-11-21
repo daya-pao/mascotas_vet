@@ -16,16 +16,11 @@
 
         <label class="form_label">Fecha de Nacimiento:</label>
         <input type="date" name="FechaNacimiento"  class="form_input"><br><br>
-        <label class="form_label">Dueño</label>
-        <input type="text" name="User_id"  class="form_input"><br><br>
 
        <label class="form_label">Tipo de Mascota:</label>
         <select name="TipoMascota_id" required>
-            <option value="perro">Perro</option>
-            <option value="gato">Gato</option>
-            <option value="ave">Ave</option>
-            <option value="conejo">conejo</option>
-            <option value="">Otro</option>
+            <option value="1">Perro</option>
+            <option value="2">Gato</option>
         </select><br><br>
         <label class="form_label">Raza</label>
         <input type="text" name="Raza_id" class="form_input"><br><br>

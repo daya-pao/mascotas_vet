@@ -20,12 +20,15 @@ if (!empty($_POST["login"])) {
 
         if ($resultado -> num_rows == 1){
             $row = $resultado -> fetch_assoc();
-            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['userId'] = $row['id'];
             $_SESSION['nombreUsuario'] = $row['nombre']; 
             $_SESSION['rolUsuario'] = $row['Role_id'];
             if (password_verify($contraseña, $row['password'])) {
+
                 if ($_SESSION['rolUsuario'] == 1) {
                     header('Location: view/HomeUser.php');
+                    $_SESSION["authenticated"] = 'true';
+                    $_SESSION["userId"]= $user->id;
                 } elseif ($_SESSION['rolUsuario'] == 2) {
                     header('Location: view/Home.php');
                 } 

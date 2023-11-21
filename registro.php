@@ -45,16 +45,6 @@
                 </div>
                 <input type="password" name="contraseña" placeholder="contraseña" >
            </div>
-           <div class="form__input">
-              <div class="form__label">
-                  <ion-icon name="briefcase"></ion-icon>
-                  <label>Rol</label>
-              </div>
-              <select name="rol" required>
-                  <option value="1">Usuario</option>
-                  <option value="2">Administrador</option>
-              </select>
-            </div>
 
            <button type="submit" class="btn_registro" name="registro" value="registro">Registrar</button>
         </form>

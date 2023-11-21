@@ -8,6 +8,7 @@
     <title>AnimaliSalud</title>
 </head>
 <body>
+    
     <!-- Encabezado (Banner) -->
     <div class="banner">
         <div class="banner_logo"><img src="img/logo.png" class="logotipo"></div>

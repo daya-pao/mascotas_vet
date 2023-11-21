@@ -9,7 +9,13 @@
 </head>
 <body>
     <?php
-    require_once(__DIR__ ."/../componentes/header.php")
+    session_start();
+    require_once(__DIR__ ."/../componentes/header.php");
+    if(isset($_SESSION["userId"])){
+        echo "user id " .$_SESSION["userId"];
+    }else{
+        echo "user id no esta establecido";
+     } 
     ?>
     <div class="informacion">
         <div class="informacion_mascota">

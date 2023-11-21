@@ -16,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    } else {
       $nombre = $_POST['nombre'];
       $FechaNacimiento = $_POST['FechaNacimiento'];
-      $nombreDueño = $_POST['User_id'];
       $tipoMascotaNombre = $_POST['TipoMascota_id'];
       $razanombre=$_POST['Raza_id'];
       $user_id = $mascotacController->obtenerUserId($nombreDueño);
