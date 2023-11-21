@@ -6,12 +6,12 @@ body{
 }
 .form_mascotas {
     max-width: 400px;
-    margin: 0px auto;
+    margin: 10vw auto;
     padding: 77px 24px 24px 65px;
     background-color: #bdb9b9;
     border: 1px solid #ccc;
     border-radius: 5px;
-    height: 38vw;
+    height: 27vw;
 }
 .form_label {
     display: block;
@@ -40,8 +40,7 @@ input[type="submit"]:hover {
     background-color: #333;
     color: #fff;
     width: 7vw;
-    height: 2.6vw;
-    margin-left: 8vw;
+    height: 36px;
     border: none;
     border-radius: 3px;
     cursor: pointer;

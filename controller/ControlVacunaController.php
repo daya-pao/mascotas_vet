@@ -60,7 +60,7 @@ class ControlVacunaController extends dataconexion{
     public function DeleteControl($mascota_id){
         $conn = $this->conexion();
         $mascota_id = mysqli_real_escape_string($conn, $mascota_id);
-        $sql = "DELETE FROM Mascota WHERE id = '$mascota_id'";
+        $sql = "DELETE FROM ControlVacuna WHERE mascota_id = '$mascota_id'";
         $result = $conn->query($sql);
         return $result;
     }
