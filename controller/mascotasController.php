@@ -32,24 +32,30 @@ class MascotasController extends dataconexion{
     
     public function ReadMascota(){
         $conn = $this->conexion();
-        $sql = "SELECT * FROM Mascota";
+        $sql = "SELECT m.id, m.nombre, m.fechaNacimiento, s.nombre AS dueño_nombre, 
+        tm.nombre AS tipo_mascota_nombre, r.nombre AS raza_nombre
+        FROM Mascota m
+        JOIN User s ON m.User_id = s.id
+        JOIN TipoMascota tm ON m.TipoMascota_id = tm.id
+        JOIN Raza r ON m.raza_id = r.id";
+
         $result = $conn->query($sql);
         if($result){
             while($row = mysqli_fetch_assoc($result)){
                 $id = $row['id'];
                 $nombre = $row['nombre'];
-                $FechaNacimiento = $row['FechaNacimiento'];
-                $user_id = $row['User_id'];
-                $tipoMascotaId = $row['TipoMascota_id'];
-                $raza_id = $row ['Raza_id'] ;
+                $fechaNacimiento = $row['fechaNacimiento'];
+                $dueñoNombre = $row['dueño_nombre'];
+                $tipoMascotaNombre = $row['tipo_mascota_nombre'];
+                $razaNombre = $row['raza_nombre'];
 
                 echo '<tr>';
                /*  echo '<td>' . $id . '</td>';  */
                 echo '<td>' . $nombre . '</td>';
-                echo '<td>' . $FechaNacimiento . '</td>';
-                echo '<td>' . $user_id. '</td>';
-                echo '<td>' . $tipoMascotaId. '</td>';
-                echo '<td>' . $raza_id. '</td>';
+                echo '<td>' .  $fechaNacimiento. '</td>';
+                echo '<td>' .  $dueñoNombre. '</td>';
+                echo '<td>' . $tipoMascotaNombre . '</td>';
+                echo '<td>' .$razaNombre  . '</td>';
                 echo '<td class="td_btn">
                 <button class= "btn btn_blue" ><a href="../view/actualizarMascota.View.php?updateid='.$id.'">editar</a>
                 <div></div>
@@ -70,7 +76,7 @@ class MascotasController extends dataconexion{
         $result = $conn->query($sql);
         return $result;
     }
-
+    
     
     
     public function obtenerUserId($nombreDueño) {

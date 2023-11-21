@@ -29,6 +29,12 @@
                      <!-- <a href="../view/vacunas.View.php" class="lines" >Vacunas</a> -->
                   </div>
                 </li>
+                <li class="li">
+                  <div class="a">
+                     <a href="../view/ControlV.Read.php" class="lines_icon"><ion-icon name="file-tray-full-sharp"></ion-icon></a>
+                     <!-- <a href="../view/vacunas.View.php" class="lines" >Vacunas</a> -->
+                  </div>
+                </li>
            </ul>
         </div>
     </nav>

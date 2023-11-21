@@ -10,16 +10,16 @@
 <body>
 <div class="formulario_control_vacuna">
         <?php include(__DIR__ ."/../procesos/ControlVacuna.php")?>
-        <form method="POST" action="">
+        <form method="post" action="">
           <h2>Registro de Control de Vacuna</h2>
             <label>Nombre Mascota:</label>
-            <input type="text" name="nombreMascota" required>
+            <input type="text" name="Mascota_id" required>
 
             <label>Nombre Vacuna:</label>
-            <input type="text"  name="NombreVacuna" required>
+            <input type="text"  name="Vacuna_id" required>
 
             <label>Fecha:</label>
-            <input type="date" name="Fecha" required>
+            <input type="date" name="fecha" required>
 
             <button type="submit">Registrar Control de Vacuna</button>
         </form>

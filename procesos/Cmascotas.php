@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       if ($result) {
          echo '<div class="error_correcto">Mascota registrada exitosamente</div>';
+         header('Location: ../view/HomeUser.php');
       } else {
          echo '<div class="error">Error al registrar la mascota</div>';
       }

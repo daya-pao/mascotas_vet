@@ -13,9 +13,14 @@
     require_once(__DIR__ ."/../componentes/header.php");
     require_once(__DIR__ ."/../componentes/navegacion.php");
     ?>
-    <div class="table_contenido">
+    <div class="titulo_contenido">
      <h2>Gestion de Vacunas</h2>
-     <button class="btn_crear"><a href="../view/Cvacunas.View.php">CREAR</a></button>
+     <div class="Vacunas_btn">
+        <button class="btn_crear"><a href="../view/Cvacunas.View.php">CREAR</a></button>
+        <button class="btn_crear"><a href="../view/ControlVacuna.View.php">CREAR CONTROL</a></button>
+     </div>
+    </div>
+    <div class="table_contenido">
         <table class="table">
             <tr class="table__tr">
                 <!-- <th class="table_th">Id</th> -->

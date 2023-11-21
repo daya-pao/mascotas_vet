@@ -16,21 +16,22 @@
     include(__DIR__ ."/../componentes/navegacion.php")
     ?>
     <h2>Gestion de usuarios</h2>
-    <table class="table">
-        <tr class="table__tr">
-            <th class="table__column">Id</th>
-            <th class="table__column">Nombre</th>
-            <th class="table__column">Username</th>
-            <th class="table__column">Email</th>
-            <!-- <th class="table__column">Password</th> -->
-            <th class="table__column">Procesos</th>
-        </tr>
-        <?php require_once(__DIR__ ."/../conexion.php");
-        require_once(__DIR__ ."/../controller/UserController.php");
-        $userControl = new UserControl();
-        $userControl->READ();
-        ?>
-    </table>
+    <div class="table_contenido">
+        <table class="table">
+            <tr class="table__tr">
+                <th class="table__column">Nombre</th>
+                <th class="table__column">Username</th>
+                <th class="table__column">Email</th>
+                <!-- <th class="table__column">Password</th> -->
+                <th class="table__column">Procesos</th>
+            </tr>
+            <?php require_once(__DIR__ ."/../conexion.php");
+            require_once(__DIR__ ."/../controller/UserController.php");
+            $userControl = new UserControl();
+            $userControl->READ();
+            ?>
+        </table>
+    </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

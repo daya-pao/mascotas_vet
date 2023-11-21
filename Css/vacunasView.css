@@ -77,11 +77,18 @@ h2{
 h1 {
   text-align: center;
 }
+.titulo_contenido{
+    margin: 1vw auto;
+    width: 81vw;
+}
 .table_contenido{
-    margin-left: 8vw;
+   margin-left: 15vw;
+   max-height: 449px;
+   overflow-y: auto;
+   width: 69vw;
 }
 .table{
-  width: 56vw;
+  width: 67vw;
   margin: 1vw auto;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }

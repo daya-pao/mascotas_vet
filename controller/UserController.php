@@ -32,7 +32,7 @@ class UserControl extends dataconexion{
         /* $contraseña = $row['password']; */
 
         echo '<tr>';
-        echo '<td>' . $id . '</td>';
+     /*    echo '<td>' . $id . '</td>'; */
         echo '<td>' . $nombre . '</td>';
         echo '<td>' . $username . '</td>';
         echo '<td>' . $email . '</td>';
