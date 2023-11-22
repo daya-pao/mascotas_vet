@@ -4,13 +4,13 @@ require_once(__DIR__ ."/../model/user.php");
 
 
 class UserControl extends dataconexion{
-  public function CREATE(User $user ,$rol){ 
+  public function CREATE(User $user){ 
    $conn = $this ->conexion();
    $user->nombre = $_POST['nombre'];
    $user->username = $_POST['nombreusuario'];
    $user->email = $_POST['email'];
    $user->password = password_hash($_POST['contraseña'], PASSWORD_DEFAULT);
-   $user->Role_Id = $_POST['rol'];
+   $user->Role_Id = 1;
    
    $consult = "INSERT INTO User (nombre, username ,email ,password , Role_id)
      VALUES('$user->nombre','$user->username','$user->email','$user->password','$user->Role_Id')";

@@ -6,12 +6,11 @@ require_once(__DIR__ ."/../model/raza.php");
 
 class MascotasController extends dataconexion{
     
-    public function CreateMascota($nombre, $FechaNacimiento, $nombreDueño,$user_id,$tipo_mascota_id,$raza_id){
+    public function CreateMascota($nombre, $FechaNacimiento,$user_id,$tipo_mascota_id,$raza_id){
         $conn = $this ->conexion();
         $mascota = new mascota();
         $mascota->nombre = $_POST['nombre'];
         $mascota->FechaNacimiento = $_POST['FechaNacimiento'];
-        $user_id = $this->obtenerUserId($_POST['User_id']);
         $tipo_mascota_id = $this->obtenerTipoMascotaId($_POST['TipoMascota_id']);
         $raza_id = $this->obtenerRazaId($_POST['Raza_id']);
          
@@ -44,18 +43,18 @@ class MascotasController extends dataconexion{
             while($row = mysqli_fetch_assoc($result)){
                 $id = $row['id'];
                 $nombre = $row['nombre'];
+                $dueñoNombre = $row['dueño_nombre']; 
                 $fechaNacimiento = $row['fechaNacimiento'];
-                $dueñoNombre = $row['dueño_nombre'];
                 $tipoMascotaNombre = $row['tipo_mascota_nombre'];
                 $razaNombre = $row['raza_nombre'];
 
                 echo '<tr>';
                /*  echo '<td>' . $id . '</td>';  */
-                echo '<td>' . $nombre . '</td>';
-                echo '<td>' .  $fechaNacimiento. '</td>';
-                echo '<td>' .  $dueñoNombre. '</td>';
-                echo '<td>' . $tipoMascotaNombre . '</td>';
-                echo '<td>' .$razaNombre  . '</td>';
+                echo '<td>' .$nombre. '</td>';
+                echo '<td>' .$dueñoNombre. '</td>';
+                echo '<td>' .$fechaNacimiento. '</td>';
+                echo '<td>' .$tipoMascotaNombre. '</td>';
+                echo '<td>' .$razaNombre. '</td>';
                 echo '<td class="td_btn">
                 <button class= "btn btn_blue" ><a href="../view/actualizarMascota.View.php?updateid='.$id.'">editar</a>
                 <div></div>
@@ -79,7 +78,7 @@ class MascotasController extends dataconexion{
     
     
     
-    public function obtenerUserId($nombreDueño) {
+  /*   public function obtenerUserId($nombreDueño) {
         $conn = $this->conexion();
         $nombreDueño = $conn->real_escape_string($nombreDueño);
         $consulta = "SELECT id FROM User WHERE nombre = '$nombreDueño'";
@@ -91,7 +90,7 @@ class MascotasController extends dataconexion{
             return null;
         }
     }
-    
+     */
     public function obtenerTipoMascotaId( $tipoMascotaNombre){
         $conn = $this->conexion();
         $tipoMascotaNombre = $conn->real_escape_string($tipoMascotaNombre);

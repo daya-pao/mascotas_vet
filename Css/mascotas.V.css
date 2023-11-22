@@ -6,12 +6,12 @@ body{
 }
 .form_mascotas {
     max-width: 400px;
-    margin: 10vw auto;
+    margin: 3cqb auto;
     padding: 77px 24px 24px 65px;
     background-color: #bdb9b9;
     border: 1px solid #ccc;
     border-radius: 5px;
-    height: 27vw;
+    height: 32vw;
 }
 .form_label {
     display: block;

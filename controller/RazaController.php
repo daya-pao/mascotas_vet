@@ -20,6 +20,30 @@ class RazaController extends dataconexion {
             return $consulta;
         }   
     }
+    public function ReadRaza() {
+        $conn = $this->conexion();
+        $sql = "SELECT * FROM Raza";
+        $result = $conn->query($sql);
+
+        if ($result && $result->num_rows > 0) {
+            echo '<table>';
+            echo '<tr><th>ID</th><th>Nombre</th><th>Tipo de Mascota</th></tr>';
+            while ($row = $result->fetch_assoc()) {
+                $id = $row['id'];
+                $nombre = $row['nombre'];
+                $tipoMascotaId = $row['TipoMascota_id'];
+
+                echo '<tr>';
+                echo '<td>' . $id . '</td>';
+                echo '<td>' . $nombre . '</td>';
+                echo '<td>' . $tipoMascotaId . '</td>';
+                echo '</tr>';
+            }
+            echo '</table>';
+        } else {
+            echo 'No hay razas registradas.';
+        }
+    }
 
     public function obtenerTipoMascotaId( $tipoMascotaNombre){
         $conn = $this->conexion();

@@ -23,8 +23,8 @@
             <tr class="table__tr">
                 <!-- <th class="table_th">Id</th> -->
                 <th class="table_th">Nombre mascota</th>
-                <th class="table_th">Fecha Nacimiento</th>
                 <th class="table_th">Dueño</th>
+                <th class="table_th">Fecha Nacimiento</th>
                 <th class="table_th">Tipo Mascota</th>
                 <th class="table_th">Raza</th>
                 <!-- <th class="table_th">Foto</th> -->
@@ -32,8 +32,19 @@
             </tr>
             <?php require_once(__DIR__ ."/../conexion.php");
              require_once(__DIR__ ."/../controller/mascotasController.php");
+             require_once(__DIR__ ."/../controller/tipoMascota.controller.php");
+             require_once(__DIR__ ."/../controller/RazaController.php");
+
              $mascotacController = new MascotasController();
              $mascotacController->ReadMascota();
+
+             /* $tipomascotaController = new TipoMascotaController();
+             $tipomascotaController->ReadTipoMascota(); */
+    
+             /* $razaController = new RazaController();
+             $razaController->ReadRaza();
+ */
+             
         ?>
         </table>
     </div>
