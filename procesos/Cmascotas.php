@@ -29,9 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $razamascota = $razaController->CreateRaza($razanombre,$tipo_mascota_id);
       $result = $mascotacController->CreateMascota($nombre, $FechaNacimiento,$user_id,$tipo_mascota_id,$raza_id);
 
-      if(!isset($_SESSION["userid"])){
-       /*   header("location: ../login.php"); */
-         exit;
+      if(!isset($_SESSION["userId"])){
+         header("location: ../login.php");
       }else{
          if ($result) {
             echo '<div class="error_correcto">Mascota registrada exitosamente</div>';

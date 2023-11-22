@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`User` (
   `nombre` VARCHAR(45) NULL,
   `username` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,
-  `` VARCHAR(100) NULL,
+  `password` VARCHAR(100) NULL,
   `Role_id` INT NOT NULL,
   `foto` BLOB NULL,
   INDEX `fk_User_Role1_idx` (`Role_id` ASC) VISIBLE,
@@ -140,20 +140,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`ControlVacuna` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-select * from user;
--- INSERT INTO User (nombre, username, email, clave, Role_id, foto)
--- VALUES
---  ('jose', 'jose14', 'jose@example.com', '123', 1, NULL),
--- ('diana', 'diana23', 'diana2@example.com', '1234', 2, NULL),
--- ('pepe', 'pe23', 'pea2@example.com', '34', 2, NULL),
--- ('daniela3', 'dani03', 'dani3@example.com', '23', 1, NULL);
-
+select * from User;
 insert into  Role values('1' ,'admin'),('2' , 'user');
-
+insert into tipomascota (id, nombre) values('1','gato') , ('2','perro');
 -- insertar mascotas
 select * from Mascota;
 select * from tipomascota;
-select * from raza;
+select * from raza; 	
 select * from vacuna;
 INSERT INTO Vacuna (nombre)
 VALUES ('Triple Felina (FVRCP)'),('Leucemia Felina (FeLV)'),('Parvovirus'),
@@ -162,13 +155,6 @@ VALUES ('Triple Felina (FVRCP)'),('Leucemia Felina (FeLV)'),('Parvovirus'),
 ('Mixomatosis'),('Enfermedad Hemorrágica Viral (VHD)');
 
 select * from ControlVacuna;
-
-
-
-
-
-
-
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
