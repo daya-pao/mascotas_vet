@@ -19,7 +19,7 @@ class MascotasController extends dataconexion{
             $mascota->tipoMascotaId = $tipo_mascota_id;
             $mascota->razaId= $raza_id;
 
-            $consulta = "INSERT INTO Mascota (nombre, FechaNacimiento, User_id,Tipomascota_id,Raza_id) 
+            $consulta = "INSERT INTO Mascota (nombre, FechaNacimiento,User_id,Tipomascota_id,Raza_id) 
             VALUES ('$mascota->nombre', '$mascota->FechaNacimiento', '$mascota->userId',' $mascota->tipoMascotaId',' $mascota->razaId')";
             
             $consulta = $conn->query($consulta);
@@ -76,21 +76,6 @@ class MascotasController extends dataconexion{
         return $result;
     }
     
-    
-    
-  /*   public function obtenerUserId($nombreDueño) {
-        $conn = $this->conexion();
-        $nombreDueño = $conn->real_escape_string($nombreDueño);
-        $consulta = "SELECT id FROM User WHERE nombre = '$nombreDueño'";
-        $resultado = $conn->query($consulta);
-        if ($resultado && $resultado->num_rows > 0) {
-            $fila = $resultado->fetch_assoc();
-            return $fila['id'];
-        } else {
-            return null;
-        }
-    }
-     */
     public function obtenerTipoMascotaId( $tipoMascotaNombre){
         $conn = $this->conexion();
         $tipoMascotaNombre = $conn->real_escape_string($tipoMascotaNombre);
