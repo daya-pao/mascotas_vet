@@ -36,7 +36,7 @@ if (isset($_GET['updateid'])) {
     }
     select.form_label {
     width: 105%;
-    height: 3vw;
+    height: 2vw;
     }
     label {
         display: block;
@@ -92,16 +92,16 @@ if (isset($_GET['updateid'])) {
         <input type="hidden" name="id" value="<?= $id ?>">
         <h2>Actualizar Datos Mascota </h2>
         <label>Nombre</label>
-        <input type="text" name="nombre" value="<?=$nombreMascota?>" required class="form_input"><br>
+        <input type="text" name="nombre" value="" required class="form_input"><br>
         <label>fecha vencimiento:</label>
-        <input type="date" name="fecha_nacimiento" value="" required class="form_input"><br>
+        <input type="date" name="FechaNacimiento" value="" required class="form_input"><br>
         <label class="form_label">Tipo de Mascota:</label>
         <select name="TipoMascota_id" required class="form_label" >
-            <option value="perro">Perro</option>
-            <option value="gato">Gato</option>
+            <option value="1">Perro</option>
+            <option value="2">Gato</option>
         </select><br><br>
-        <label class="form_label">Raza</label>
-        <input type="text" name="Raza_id" class="form_input"><br><br>
+      <!--   <label class="form_label">Raza</label>
+        <input type="text" name="Raza_id" class="form_input"><br><br> -->
         <div class="botones">
             <input type="submit" value="update">
             <button><a href="../view/user.View.php">ATRAS</a></button>

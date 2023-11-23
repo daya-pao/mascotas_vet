@@ -141,6 +141,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`ControlVacuna` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 select * from User;
+insert into User values('1', 'dayana', 'daya06', 'dayana@gmail.com', '$2y$10$zaYdUuOtwjF1fPpi5xsJuu0oaJ5Est4kxdh0zw9tr6wY9jufsCTK.', '1', null
+),('2', 'dayana', 'user1', 'user@gmail.com', '$2y$10$zaYdUuOtwjF1fPpi5xsJuu0oaJ5Est4kxdh0zw9tr6wY9jufsCTK.', '1', null);
+
 insert into  Role values('1' ,'admin'),('2' , 'user');
 insert into tipomascota (id, nombre) values('1','gato') , ('2','perro');
 -- insertar mascotas
