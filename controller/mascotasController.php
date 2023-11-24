@@ -6,28 +6,29 @@ require_once(__DIR__ ."/../model/raza.php");
 
 class MascotasController extends dataconexion{
     
-    public function CreateMascota($nombre, $FechaNacimiento,$user_id,$tipo_mascota_id,$raza_id){
-        $conn = $this ->conexion();
-        $mascota = new mascota();
-        $mascota->nombre = $_POST['nombre'];
-        $mascota->FechaNacimiento = $_POST['FechaNacimiento'];
-        $tipo_mascota_id = $this->obtenerTipoMascotaId($_POST['TipoMascota_id']);
-        $raza_id = $this->obtenerRazaId($_POST['Raza_id']);
-         
-        if ($user_id !== null || $tipo_mascota_id !== null || $raza_id !== null) {
-            $mascota->userId = $user_id;
-            $mascota->tipoMascotaId = $tipo_mascota_id;
-            $mascota->razaId= $raza_id;
 
-            $consulta = "INSERT INTO Mascota (nombre, FechaNacimiento,User_id,Tipomascota_id,Raza_id) 
-            VALUES ('$mascota->nombre', '$mascota->FechaNacimiento', '$mascota->userId',' $mascota->tipoMascotaId',' $mascota->razaId')";
-            
-            $consulta = $conn->query($consulta);
-    
-            return $consulta;
+public function CreateMascota($nombre, $FechaNacimiento, $user_id, $tipoMascota_id, $raza_id) {
+    $conn = $this->conexion();
+    $mascota = new mascota();
+    $mascota->nombre = $_POST['nombre'];
+    $mascota->FechaNacimiento = $_POST['FechaNacimiento'];
+    $tipo_mascota_id = $this->obtenerTipoMascotaId($_POST['TipoMascota_id']);
+    $raza_id = $this->obtenerRazaId($_POST['Raza_id']);
 
-        }
+    if ($user_id !== null || $tipo_mascota_id !== null || $raza_id !== null) {
+        $mascota->userId = $user_id;
+        $mascota->tipoMascotaId = $tipo_mascota_id;
+        $mascota->razaId = $raza_id;
+
+        $consulta = "INSERT INTO Mascota (nombre, FechaNacimiento, User_id, Tipomascota_id, Raza_id) 
+        VALUES ('$mascota->nombre', '$mascota->FechaNacimiento', '$mascota->userId',' $mascota->tipoMascotaId',' $mascota->razaId')";
+
+        $consulta = $conn->query($consulta);
+
+        return $consulta;
     }
+}
+
     
     public function ReadMascota(){
         $conn = $this->conexion();
@@ -75,22 +76,20 @@ class MascotasController extends dataconexion{
         $result = $conn->query($sql);
         return $result;
     }
-    
-
-    public function UpdateMascota($id ,$nombre ,$fechaNacimiento, $tipo_mascota_id){
+    public function UpdateMascota($id, $nombre, $fechaNacimiento, $tipoMascotaNombre,$razaNombre) {
         $conn = $this->conexion();
-        $nombre = mysqli_real_escape_string($conn ,$nombre);/* 
-        $fechaNacimiento = mysqli_real_escape_string($conn, $fechaNacimiento); */
-       /*  $tipoMascotaNombre = mysqli_real_escape_string($conn, $tipoMascotaNombre);*/
-        /* $razaNombre = mysqli_real_escape_string($conn, $razaNombre); */
-
-        $consulta = "UPDATE Mascota SET nombre = '$nombre', FechaNacimiento = '$fechaNacimiento' ,TipoMascota_id ='$tipo_mascota_id' WHERE id =$id";
-
-        $resultado= $conn->query($consulta);
+        $nombre = mysqli_real_escape_string($conn, $nombre);
+        $fechaNacimiento = mysqli_real_escape_string($conn, $fechaNacimiento);
+        $tipoMascota_id = $this->obtenerTipoMascotaId($tipoMascotaNombre);
+        $raza_id = $this->obtenerRazaId($razaNombre);
+        $consulta = "UPDATE Mascota SET nombre = '$nombre', FechaNacimiento = '$fechaNacimiento', Tipomascota_id = '$tipoMascota_id' , Raza_id = '$raza_id' WHERE id = $id";
+    
+        $resultado = $conn->query($consulta);
     
         return $resultado;
-
     }
+
+    
 
     public function obtenerTipoMascotaId( $tipoMascotaNombre){
         $conn = $this->conexion();

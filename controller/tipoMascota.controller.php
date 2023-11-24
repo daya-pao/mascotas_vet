@@ -34,6 +34,5 @@ class TipoMascotaController extends dataconexion {
             echo 'No hay tipos de mascota registrados.';
         }
     }
-
 }
 ?>

@@ -19,14 +19,14 @@
 
        <label class="form_label">Tipo de Mascota:</label>
         <select name="TipoMascota_id" required>
-            <option value="1">Perro</option>
-            <option value="2">Gato</option>
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
         </select><br><br>
         <label class="form_label">Raza</label>
         <input type="text" name="Raza_id" class="form_input"><br><br>
 
         <input type="submit" value="Registrar Mascota">
-        <button class="btn_atras"><a href="../view/Home.php">ATRAS</a></button>
+        <button class="btn_atras"><a href="../view/Homeuser.php">ATRAS</a></button>
     </form>
 </body>
 </html>

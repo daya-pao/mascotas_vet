@@ -100,8 +100,8 @@ if (isset($_GET['updateid'])) {
             <option value="1">Perro</option>
             <option value="2">Gato</option>
         </select><br><br>
-      <!--   <label class="form_label">Raza</label>
-        <input type="text" name="Raza_id" class="form_input"><br><br> -->
+        <label class="form_label">Raza</label>
+        <input type="text" name="Raza_id" class="form_input"><br><br>
         <div class="botones">
             <input type="submit" value="update">
             <button><a href="../view/user.View.php">ATRAS</a></button>

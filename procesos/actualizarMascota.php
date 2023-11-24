@@ -8,9 +8,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = $_POST['nombre'];
     $fechaNacimiento= $_POST['FechaNacimiento'];
     $tipo_mascota_id = $_POST['TipoMascota_id'];
+    $raza_id = ['Raza_id'];
 
     $mascotacController= new MascotasController();
-    $result=$mascotacController->UpdateMascota($id,$nombre,$fechaNacimiento, $tipo_mascota_id );
+    $result=$mascotacController->UpdateMascota($id,$nombre,$fechaNacimiento, $tipo_mascota_id,$raza_id);
 
     if ($result) {
         echo '<div class="error">Actualización de mascota exitosa</div>';

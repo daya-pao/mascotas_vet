@@ -70,7 +70,7 @@
 }
 .border_caja{
     border-radius: 5vw;
-    border: 0.3vw solid  #aedcec;
+    border: 0.3vw solid  black;
     width: 11vw;
     height: 24vh;
     display: flex;
