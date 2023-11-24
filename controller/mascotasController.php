@@ -56,7 +56,7 @@ class MascotasController extends dataconexion{
                 echo '<td>' .$tipoMascotaNombre. '</td>';
                 echo '<td>' .$razaNombre. '</td>';
                 echo '<td class="td_btn">
-                <button class= "btn btn_blue" ><a href="../view/actualizarMascota.View.php?updateid='.$id.'">editar</a>
+                <button class= "btn btn_blue" ><a href="../view/actualizarMascota.View.php?updateid='. $id .'">editar</a>
                 <div></div>
                 </button>
                   <form method="post" action="../procesos/eliminarMascota.php">
@@ -77,14 +77,13 @@ class MascotasController extends dataconexion{
     }
     
 
-    public function UpdateMascota($id ,$nombre ,$fechaNacimiento, $tipo_mascota_id){
+    public function UpdateMascota($id ,$nombre,$fechaNacimiento,$tipo_mascota_id){
         $conn = $this->conexion();
-        $nombre = mysqli_real_escape_string($conn ,$nombre);/* 
-        $fechaNacimiento = mysqli_real_escape_string($conn, $fechaNacimiento); */
-       /*  $tipoMascotaNombre = mysqli_real_escape_string($conn, $tipoMascotaNombre);*/
-        /* $razaNombre = mysqli_real_escape_string($conn, $razaNombre); */
 
-        $consulta = "UPDATE Mascota SET nombre = '$nombre', FechaNacimiento = '$fechaNacimiento' ,TipoMascota_id ='$tipo_mascota_id' WHERE id =$id";
+        $nombre = mysqli_real_escape_string($conn, $nombre);
+      /*   $tipo_mascota_id = mysqli_real_escape_string($conn, $tipo_mascota_id);
+ */
+        $consulta = "UPDATE Mascota SET nombre = '$nombre', FechaNacimiento = '$fechaNacimiento' ,TipoMascota_id= '$tipo_mascota_id' WHERE id = '$id'";
 
         $resultado= $conn->query($consulta);
     

@@ -42,9 +42,7 @@
              $tipomascotaController->ReadTipoMascota(); */
     
              /* $razaController = new RazaController();
-             $razaController->ReadRaza();
- */
-             
+             $razaController->ReadRaza();*/
         ?>
         </table>
     </div>

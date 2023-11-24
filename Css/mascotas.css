@@ -160,41 +160,6 @@ td.td_btn {
     transition: 0.5s;
     background: rgba(250,212,165,255);
 }
-.navegacion.active{
-   /*  width: 14vw; */
-}
-/* .menu_toggle{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 14vh;
-    padding: -3vw ;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    cursor: pointer;
-}
-.menu_toggle::before{
-    content: ' ';
-    position: absolute;
-    width: 3vw;
-    height: 1vh;
-    background: rgb(2, 2, 2);
-    transform: translateY(-1vw);
-}
-.navegacion.active .menu_toggle::before{
-    transform: translateY(0) rotate(45deg);  
-}
-.menu_toggle::after{
-    content: ' ';
-    position: absolute;
-    width: 3vw;
-    height: 1vh;
-    background:rgb(5, 5, 5);;
-    box-shadow: 0 -14px 0 rgb(20, 19, 19);;
-    transform: translateY(1vw);
-} */
 .navegacion.active .menu_toggle::after{
     transform: translateY(0) rotate(-45deg);
     box-shadow: 0 0 0 #333;  

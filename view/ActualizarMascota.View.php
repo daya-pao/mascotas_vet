@@ -89,22 +89,22 @@ if (isset($_GET['updateid'])) {
 </style>
 <body>
     <form method="POST" action="../procesos/actualizarMascota.php">
-        <input type="hidden" name="id" value="<?= $id ?>">
+        <input type="" name="id" value="<?= $id ?>">
         <h2>Actualizar Datos Mascota </h2>
         <label>Nombre</label>
         <input type="text" name="nombre" value="" required class="form_input"><br>
         <label>fecha vencimiento:</label>
         <input type="date" name="FechaNacimiento" value="" required class="form_input"><br>
-        <label class="form_label">Tipo de Mascota:</label>
+       <label class="form_label">Tipo de Mascota:</label>
         <select name="TipoMascota_id" required class="form_label" >
             <option value="1">Perro</option>
             <option value="2">Gato</option>
-        </select><br><br>
+        </select><br><br> 
       <!--   <label class="form_label">Raza</label>
         <input type="text" name="Raza_id" class="form_input"><br><br> -->
         <div class="botones">
             <input type="submit" value="update">
-            <button><a href="../view/user.View.php">ATRAS</a></button>
+            <button><a href="../view/mascotas.View.php">ATRAS</a></button>
         </div>
     </form>
 </body>
