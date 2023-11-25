@@ -26,32 +26,21 @@ class ControlVacunaController extends dataconexion{
     }
     public function ReadControl(){
         $conn = $this->conexion();
-        $sql = "SELECT  m.nombre AS mascota_nombre, v.nombre AS vacuna_nombre, cv.fecha
+        $sql = "SELECT  m.nombre AS mascota_nombre, v.nombre AS vacuna_nombre, cv.fecha 
         FROM ControlVacuna cv
         JOIN Mascota m ON cv.Mascota_id = m.id
         JOIN Vacuna v ON cv.Vacuna_id = v.id
-        /* JOIN User s ON m.User_id = s.id */";
+        JOIN User s ON m.User_id = s.id";
         $result = $conn->query($sql);
         if($result){
             while($row = mysqli_fetch_assoc($result)){
                 $mascotaNombre = $row['mascota_nombre'];
                 $vacunaNombre = $row['vacuna_nombre'];
                 $fecha = $row['fecha'];
-                /* $dueñoNombre = $row['dueño_nombre']; */
                 echo '<tr>';
                 echo '<td>' . $mascotaNombre . '</td>';
                 echo '<td>' . $vacunaNombre . '</td>';
                 echo '<td>' . $fecha. '</td>';
-                /* echo '<td>' . $dueñoNombre . '</td>'; */ 
-                echo '<td class="td_btn">
-                 <button class= "btn btn_blue" ><a href="../view/actualizarMascota.View.php?updateid="">editar</a>
-                 <div></div>
-                 </button>
-                   <form method="post" action="../procesos/eliminarControl.php">
-                     <input type="hidden" name="mascota_id" value="">
-                     <button class="btn btn_red" type="submit" name="Mascotadelete">eliminar</button>
-                   </form>
-                 </td>';
                 echo '</tr>';
             }
         }

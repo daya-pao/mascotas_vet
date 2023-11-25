@@ -62,7 +62,7 @@ class VacunasController extends dataconexion{
     $resultado = $conn->query($consulta);
 
     return $resultado;
-}
+  } 
 
 }
 ?>

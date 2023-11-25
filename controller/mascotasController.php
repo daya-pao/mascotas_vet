@@ -75,21 +75,21 @@ class MascotasController extends dataconexion{
         $result = $conn->query($sql);
         return $result;
     }
-    
 
-    public function UpdateMascota($id ,$nombre,$fechaNacimiento,$tipo_mascota_id){
-        $conn = $this->conexion();
-
+     public function UpdateMascota($id, $nombre, $fechaNacimiento, $tipoMascota_id){
+        $conn = $this ->conexion();
         $nombre = mysqli_real_escape_string($conn, $nombre);
-      /*   $tipo_mascota_id = mysqli_real_escape_string($conn, $tipo_mascota_id);
- */
-        $consulta = "UPDATE Mascota SET nombre = '$nombre', FechaNacimiento = '$fechaNacimiento' ,TipoMascota_id= '$tipo_mascota_id' WHERE id = '$id'";
+        $fechaNacimiento = mysqli_real_escape_string($conn, $fechaNacimiento);
+        $tipoMascota_id = $this->obtenerTipoMascotaId($tipoMascota_id);
+        $consulta = "UPDATE Mascota SET nombre = '$nombre', FechaNacimiento = '$fechaNacimiento', 
+        TipoMascota_id = '$tipoMascota_id'  WHERE id = $id";
 
-        $resultado= $conn->query($consulta);
-    
+        $resultado = $conn->query($consulta);
+        
         return $resultado;
-
     }
+
+ 
 
     public function obtenerTipoMascotaId( $tipoMascotaNombre){
         $conn = $this->conexion();

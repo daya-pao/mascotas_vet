@@ -29,11 +29,15 @@ if (isset($_GET['updateid'])) {
     }
     form {
         max-width: 400px;
-        margin: 5px auto;
+        margin: 6vw auto;
         padding: 40px;
         background-color: #f4f4f4;
         border: 1px solid #ccc;
         border-radius: 5px;
+    }
+    .btn {
+       display: flex;
+       justify-content: space-between;
     }
     label {
         display: block;
@@ -72,7 +76,6 @@ if (isset($_GET['updateid'])) {
     }
     </style>
 <body>
-    <button><a href="../view/user.View.php">ATRAS</a></button>
     <form method="POST" action="../procesos/actualizarUser.php">
         <input type="hidden" name="id" value="<?= $id ?>">
         <h2>Actualizar Datos</h2>
@@ -84,7 +87,10 @@ if (isset($_GET['updateid'])) {
         <input type="email" name="email" value="" required><br>
         <label>Contaseña:</label>
         <input type="password" name="contraseña" value="" required><br>
-        <input type="submit" value="update">
+        <div class="btn">
+         <input type="submit" value="update">
+         <button><a href="../view/user.View.php">ATRAS</a></button>
+        </div>
     </form>
 </body>
 </html>

@@ -8,3 +8,18 @@ if (isset($_SESSION['nombreUsuario']) && isset($_SESSION['rolUsuario'])) {
     echo "error";
 }
 ?>
+public function obtenerTipoMascotaId( $tipoMascotaNombre){
+        $conn = $this->conexion();
+        $tipoMascotaNombre = $conn->real_escape_string($tipoMascotaNombre);
+        $consulta = "SELECT id FROM TipoMascota WHERE nombre = '$tipoMascotaNombre'";
+        $resultado = $conn->query($consulta);
+        if($resultado && $resultado->num_rows > 0) {
+            $fila = $resultado->fetch_assoc();
+            return $fila["id"];
+        }else{
+            return null;
+        }
+    }
+    
+
+

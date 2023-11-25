@@ -3,6 +3,7 @@ require_once(__DIR__ . "/../conexion.php");
 require_once(__DIR__ . "/../model/raza.php");
 require_once(__DIR__ . "/../controller/mascotasController.php");
 
+
 class RazaController extends dataconexion {
     public function CreateRaza($nombre , $tipo_mascota_id){
         $conn = $this->conexion();
@@ -43,6 +44,20 @@ class RazaController extends dataconexion {
         } else {
             echo 'No hay razas registradas.';
         }
+    }
+    
+    public function UpdateRaza($id,$nombre,$tipoMascota_id ){
+        $conn = $this->conexion();
+        $nombre = mysqli_real_escape_string($conn, $nombre);
+        $tipoMascota_id = $this->obtenerTipoMascotaId($tipoMascota_id);
+
+        $consulta = "UPDATE Raza SET nombre = '$nombre', TipoMascota_id = '$tipoMascota_id',
+         WHERE id = $id";
+
+        $resultado = $conn->query($consulta);
+        
+        return $resultado;
+
     }
 
     public function obtenerTipoMascotaId( $tipoMascotaNombre){
