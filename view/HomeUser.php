@@ -9,13 +9,13 @@
 </head>
 <body>
     <?php
-   /*  session_start(); */
+   session_start();
     require_once(__DIR__ ."/../componentes/header.php");
-   /*  if(isset($_SESSION["userId"])){
-        echo "user id " .$_SESSION["userId"];
+    if(isset($_SESSION["userId"])){
+      /*   echo "user id " .$_SESSION["userId"]; */
     }else{
         echo "user id no esta establecido";
-     }  */
+     } 
     ?>
     <div class="informacion">
         <div class="informacion_mascota">
@@ -25,8 +25,7 @@
                  <h5>Registar mascota</h5>
               </div>  
             </a>
-            
-            <a href="">
+            <a href="../view/informacionMascota.php">
                <div class="border_caja">
                   <img src="../img/information.png" class="img">
                   <h5>Informacion</h5>

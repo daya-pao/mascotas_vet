@@ -98,7 +98,7 @@ if (isset($_GET['updateid'])) {
         <label class="form_label">Tipo de Mascota:</label>
         <select name="TipoMascota_id" required class="form_label" >
         <?php
-        $tiposMascota = array("Perro", "Gato"); // Puedes obtener esto de la base de datos si es dinámico
+        $tiposMascota = array("Perro", "Gato");
         foreach ($tiposMascota as $tipo) {
             echo '<option value="' . $tipo . '">' . $tipo . '</option>';
         }

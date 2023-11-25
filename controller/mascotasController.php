@@ -76,8 +76,8 @@ public function CreateMascota($nombre, $FechaNacimiento, $user_id, $tipoMascota_
         $result = $conn->query($sql);
         return $result;
     }
-
-     public function UpdateMascota($id, $nombre, $fechaNacimiento, $tipoMascota_id){
+    
+    public function UpdateMascota($id, $nombre, $fechaNacimiento, $tipoMascota_id){
         $conn = $this ->conexion();
         $nombre = mysqli_real_escape_string($conn, $nombre);
         $fechaNacimiento = mysqli_real_escape_string($conn, $fechaNacimiento);
@@ -89,8 +89,6 @@ public function CreateMascota($nombre, $FechaNacimiento, $user_id, $tipoMascota_
         
         return $resultado;
     }
-
- 
 
     public function obtenerTipoMascotaId( $tipoMascotaNombre){
         $conn = $this->conexion();
@@ -117,4 +115,59 @@ public function CreateMascota($nombre, $FechaNacimiento, $user_id, $tipoMascota_
             return null;
         }
     }
+    // En el controlador de mascotas
+    public function obtenerInformacionMascotaPorUsuario($user_id) {
+    $conn = $this->conexion();
+
+    // Ajusta la consulta según la estructura de tu base de datos
+    $sql = "SELECT m.id, m.nombre, m.fechaNacimiento, tm.nombre AS tipo_mascota, r.nombre AS raza, u.nombre AS nombre_dueno
+            FROM Mascota m
+            JOIN TipoMascota tm ON m.TipoMascota_id = tm.id
+            JOIN Raza r ON m.raza_id = r.id
+            JOIN User u ON m.User_id = u.id
+            WHERE m.User_id = '$user_id'
+            LIMIT 1"; // Limita a 1 porque asumo que solo quieres la información de una mascota
+
+    $result = $conn->query($sql);
+
+    if ($result && $result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+
+        return [
+            'nombre_mascota' => $row['nombre'],
+            'fechaNacimiento' => $row['fechaNacimiento'],
+            'tipo_mascota' => $row['tipo_mascota'],
+            'raza' => $row['raza'],
+            'nombre_dueno' => $row['nombre_dueno'],
+        ];
+    } else {
+        return null; // No se encontró información para esta mascota
+    }
 }
+
+
+   /*  public function obtenerInformacionMascota($id) {
+        $conn = $this->conexion();
+    
+        // Asegúrate de que $id no sea nulo antes de usarlo
+        if ($id !== null) {
+            $id = mysqli_real_escape_string($conn, $id);
+    
+            $sql = "SELECT m.nombre as nombre_mascota, m.fechaNacimiento, tm.nombre as tipo_mascota, r.nombre as raza, s.nombre as nombre_dueno
+                    FROM Mascota m
+                    JOIN User s ON m.User_id = s.id
+                    JOIN TipoMascota tm ON m.TipoMascota_id = tm.id
+                    JOIN Raza r ON m.raza_id = r.id
+                    WHERE m.id = '$id'";
+    
+            $result = $conn->query($sql);
+    
+            if ($result && $result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                return $row;
+            }
+        }
+    
+        return null;
+    } */
+}    

@@ -3,8 +3,8 @@
     <div class="perfil">
         <div class="border"><img src="../img/user_vector.png" class="user_ejemplo"></div>
         <div>
-          <p >nombre:<?php /* echo $nombreUsuario; */?></p>
-          <p>Rol: <?php  /* echo $rolnombre; */?></p>
+          <p >nombre:</p>
+          <p>Rol:</p>
         </div>
     </div>
     <div class="nav_contenido">

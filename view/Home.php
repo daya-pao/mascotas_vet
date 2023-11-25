@@ -26,7 +26,6 @@
         <div class="contenido_sesiones">
             <div class="contenido_cajas">
                 <div class="info_cajas">
-                    <h2>0</h2>
                     <hr class="line">
                     <div>
                         <img src="../img/usuario.png" class="img">
@@ -36,7 +35,6 @@
             </div>
             <div class="contenido_cajas">
                <div class="info_cajas">
-                    <h2>0</h2>
                     <hr class="line">
                     <div>
                       <img src="../img/mascota.png" class="img">
@@ -46,7 +44,6 @@
             </div>
             <div class="contenido_cajas">
                 <div class="info_cajas">
-                    <h2>0</h2>
                     <hr class="line">
                     <div>
                         <img src="../img/vacuna.png" class="img">

@@ -17,7 +17,5 @@
             <p id="animacio_texto">redirigiendose al login...</p>
         </div>
     </div>
-
-    
 </body>
 </html>

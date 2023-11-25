@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.imagen_fondo{
+    background-image: url("../img/veterinario.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.contenido_informacion {
+    padding: 7vw;
+    margin-left: 10vw;
+    margin-top: 0vw;
+    width: 46vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+}
+.contenido_informacion h1{
+    text-align: center;
+}
+a{
+    color:white;
+}
+
+button{
+    width: 10vw;
+    height: 6vh;
+    color:white;
+    background: rgb(44, 42, 42);
+    border: 0;
+    border-radius: 2vw;
+}
+button:hover{
+    background-color: rgb(72, 69, 69);
+}
