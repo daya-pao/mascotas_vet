@@ -6,28 +6,29 @@ require_once(__DIR__ ."/../model/raza.php");
 
 class MascotasController extends dataconexion{
     
-    public function CreateMascota($nombre, $FechaNacimiento,$user_id,$tipo_mascota_id,$raza_id){
-        $conn = $this ->conexion();
-        $mascota = new mascota();
-        $mascota->nombre = $_POST['nombre'];
-        $mascota->FechaNacimiento = $_POST['FechaNacimiento'];
-        $tipo_mascota_id = $this->obtenerTipoMascotaId($_POST['TipoMascota_id']);
-        $raza_id = $this->obtenerRazaId($_POST['Raza_id']);
-         
-        if ($user_id !== null || $tipo_mascota_id !== null || $raza_id !== null) {
-            $mascota->userId = $user_id;
-            $mascota->tipoMascotaId = $tipo_mascota_id;
-            $mascota->razaId= $raza_id;
 
-            $consulta = "INSERT INTO Mascota (nombre, FechaNacimiento,User_id,Tipomascota_id,Raza_id) 
-            VALUES ('$mascota->nombre', '$mascota->FechaNacimiento', '$mascota->userId',' $mascota->tipoMascotaId',' $mascota->razaId')";
-            
-            $consulta = $conn->query($consulta);
-    
-            return $consulta;
+public function CreateMascota($nombre, $FechaNacimiento, $user_id, $tipoMascota_id, $raza_id) {
+    $conn = $this->conexion();
+    $mascota = new mascota();
+    $mascota->nombre = $_POST['nombre'];
+    $mascota->FechaNacimiento = $_POST['FechaNacimiento'];
+    $tipo_mascota_id = $this->obtenerTipoMascotaId($_POST['TipoMascota_id']);
+    $raza_id = $this->obtenerRazaId($_POST['Raza_id']);
 
-        }
+    if ($user_id !== null || $tipo_mascota_id !== null || $raza_id !== null) {
+        $mascota->userId = $user_id;
+        $mascota->tipoMascotaId = $tipo_mascota_id;
+        $mascota->razaId = $raza_id;
+
+        $consulta = "INSERT INTO Mascota (nombre, FechaNacimiento, User_id, Tipomascota_id, Raza_id) 
+        VALUES ('$mascota->nombre', '$mascota->FechaNacimiento', '$mascota->userId',' $mascota->tipoMascotaId',' $mascota->razaId')";
+
+        $consulta = $conn->query($consulta);
+
+        return $consulta;
     }
+}
+
     
     public function ReadMascota(){
         $conn = $this->conexion();
