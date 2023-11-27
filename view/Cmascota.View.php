@@ -26,7 +26,7 @@
         <input type="text" name="Raza_id" class="form_input"><br><br>
 
         <input type="submit" value="Registrar Mascota">
-        <button class="btn_atras"><a href="../view/Homeuser.php">ATRAS</a></button>
+        <button class="btn_atras"><a href="../view/Home.php">ATRAS</a></button>
     </form>
 </body>
 </html>
