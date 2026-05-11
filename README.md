@@ -33,7 +33,7 @@ Si deseas ejecutar este proyecto localmente:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone [https://github.com/TU_USUARIO/vetAnimal.git](https://github.com/TU_USUARIO/vetAnimal.git)
+   git clone [https://github.com/daya-pao/vetAnimal.git](https://github.com/daya-pao/vetAnimal.git)
     ```
 2. **Instala las dependencias:**
      ```bash
@@ -47,7 +47,7 @@ Si deseas ejecutar este proyecto localmente:
      http://localhost:4200/.
 
 ---
-**Desarrollado con ❤️ por** **DAYA AREVALO]**
+**Desarrollado con ❤️ por** **DAYA AREVALO**
 - **GitHub:** [@daya-pao](https://github.com/daya-pao)
 - **LinkedIn:** (https://linkedin.com/in/daya-pao)
 ---
