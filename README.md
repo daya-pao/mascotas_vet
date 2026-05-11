@@ -44,7 +44,7 @@ Si deseas ejecutar este proyecto localmente:
       ng serve
    ```
 4.**Navega a**
-http://localhost:4200/.
+     http://localhost:4200/.
 
 ---
 **Desarrollado con ❤️ por** **DAYA AREVALO]**
