@@ -43,10 +43,11 @@ Si deseas ejecutar este proyecto localmente:
    ```bash
       ng serve
    ```
-** Navega a http://localhost:4200/.**
+4.**Navega a**
+http://localhost:4200/.
 
 ---
-**Desarrollado con ❤️ por **[DAYA AREVALO]**
+**Desarrollado con ❤️ por** **DAYA AREVALO]**
 - **GitHub:** [@daya-pao](https://github.com/daya-pao)
-- **LinkedIn:** [Tu Perfil de LinkedIn](https://linkedin.com/in/daya-pao)
+- **LinkedIn:** (https://linkedin.com/in/daya-pao)
 ---
